@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +11,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float mouseSensitivity;
     [SerializeField] private float speed;
     Vector2 input;
+    
+  
     void Update()
 
     {
@@ -33,8 +36,9 @@ public class PlayerMovement : MonoBehaviour
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
 
     }
-
+   
 }
+
     
 
 
