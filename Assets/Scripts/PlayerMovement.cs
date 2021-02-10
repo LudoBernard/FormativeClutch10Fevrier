@@ -35,6 +35,11 @@ public class PlayerMovement : MonoBehaviour
 
         transform.position += (camF * input.y + camR * input.x) * Time.deltaTime * speed;
 
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Application.Quit();
+            Debug.Log("QUIT");
+        }
     }
    
 }
